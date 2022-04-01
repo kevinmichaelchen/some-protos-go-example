@@ -24,6 +24,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
+	log.Println("Starting server...")
 	if err := server.Serve(listener); err != nil {
 		log.Fatal(err)
 	}
