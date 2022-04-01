@@ -13,6 +13,7 @@ import (
 type Server struct{}
 
 func (s Server) SayHello(ctx context.Context, req *v1beta1.SayHelloRequest) (*v1beta1.SayHelloResponse, error) {
+	log.Println("SayHello was invoked")
 	return &v1beta1.SayHelloResponse{Message: "foobar"}, nil
 }
 
